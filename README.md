@@ -6,6 +6,9 @@ Hình 2:
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/62c4a70d-2aa3-4df2-a63e-60d5d2b9c9f4" />
 Hình 3: 
 <img width="976" height="588" alt="image" src="https://github.com/user-attachments/assets/aaa1171d-0728-49b5-8372-6698d6fdd71c" />
+
+![Uploading image.png…]()
+
 Hình 
 <img width="1864" height="823" alt="image" src="https://github.com/user-attachments/assets/a018245e-a5c5-43c0-84a0-1e71380b4c2b" />
 
