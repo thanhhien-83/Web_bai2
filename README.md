@@ -1,4 +1,4 @@
-<img width="852" height="568" alt="image" src="https://github.com/user-attachments/assets/45894723-bbd7-446c-9e71-0842fc8a75d9" /># Web_bai2
+# Web_bai2
 
 Hình 1: 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5a6da29b-7ed0-4969-9481-e9dc6e74156b" />
