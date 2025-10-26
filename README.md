@@ -1,6 +1,6 @@
 # Web_bai2
 
-Hình 1: 
+Hình 1:  
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5a6da29b-7ed0-4969-9481-e9dc6e74156b" />  
 
 Hình 2: 
