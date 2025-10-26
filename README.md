@@ -99,17 +99,17 @@ DEADLINE: 26/10/2025
 ## BÀI LÀM
 # 2.1 Apache:  
 o	Tắt IIS: iisreset /stop.  
-o	Giải nén Apache vào D:\Apache24, chỉnh httpd.conf và extra\httpd-vhosts.conf để DocumentRoot = D:\Apache24\fullname, ServerName = fullname.com.  
-o	Sửa file hosts: thêm "127.0.0.1 fullname.com".  
-o	Cài service và khởi động: D:\Apache24\bin\httpd.exe -k install && D:\Apache24\bin\httpd.exe -k start.  
-o	Kiểm tra: mở http://fullname.com; xem D:\Apache24\logs\error.log; dùng netstat -ano | findstr :80 nếu port bị chiếm.  
+o	Giải nén Apache vào E:\Apache24, chỉnh httpd.conf và extra\httpd-vhosts.conf để DocumentRoot = E:\Apache24\huathithanhhien, ServerName = huathithanhhien.com.  
+o	Sửa file hosts: thêm "127.0.0.1 huathithanhhien.com".  
+o	Cài service và khởi động: E:\Apache24\bin\httpd.exe -k install && E:\Apache24\bin\httpd.exe -k start.  
+o	Kiểm tra: mở http://huathithanhhien.com; xem E:\Apache24\logs\error.log; dùng netstat -ano | findstr :80 nếu port bị chiếm.  
 Hình 1:  
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5a6da29b-7ed0-4969-9481-e9dc6e74156b" />  
 
 # 2.2 Node.js & Node-RED:  
-o	Cài Node.js vào D:\nodejs (dùng bản ổn định đề nghị).  
-o	Cài Node-RED: npm install -g --unsafe-perm node-red --prefix "D:\nodejs\nodered".  
-o	Tạo run-nodered.cmd với PATH fix và lệnh chạy red.js; dùng nssm để tạo service: nssm install a1-nodered "D:\nodejs\nodered\run-nodered.cmd" và nssm start a1-nodered.  
+o	Cài Node.js vào E:\nodejs (dùng bản ổn định đề nghị).  
+o	Cài Node-RED: npm install -g --unsafe-perm node-red --prefix "E:\nodejs\nodered".  
+o	Tạo run-nodered.cmd với PATH fix và lệnh chạy red.js; dùng nssm để tạo service: nssm install a1-nodered "E:\nodejs\nodered\run-nodered.cmd" và nssm start a1-nodered.  
 o	Kiểm tra: mở http://localhost:1880; nếu service lỗi, chạy run-nodered.cmd tay để debug.  
 Hình 2:  
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/62c4a70d-2aa3-4df2-a63e-60d5d2b9c9f4" />  
@@ -124,7 +124,7 @@ Hình 3:
 
 # 2.4 Cài node trên Node-RED & adminAuth:  
 o	Cài các node cần thiết: node-red-contrib-mssql-plus, node-red-node-mysql, node-red-contrib-telegrambot, node-red-contrib-moment, node-red-contrib-influxdb, node-red-contrib-duckdns, node-red-contrib-cron-plus.  
-o	Bật adminAuth trong D:\nodejs\nodered\work\settings.js bằng password đã mã hóa (tạo hash bằng tool được chỉ dẫn).  
+o	Bật adminAuth trong E:\nodejs\nodered\work\settings.js bằng password đã mã hóa (tạo hash bằng tool được chỉ dẫn).  
 o	Restart service nssm restart a1-nodered và kiểm tra yêu cầu login.  
 Hình 4:   
 <img width="976" height="588" alt="image" src="https://github.com/user-attachments/assets/aaa1171d-0728-49b5-8372-6698d6fdd71c" />  
@@ -140,16 +140,16 @@ Hình 6:
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8be76f6a-d979-4960-8c5b-a65d486bd662" />  
 
 # 2.6 Front-end:  
-o	Đặt index.html, fullname.css, fullname.js trong D:\Apache24\fullname (fullname là tên bạn, viết liền không dấu).  
-o	fullname.js dùng fetch('/timkiem?q=...') hoặc fetch('http://fullname.com/timkiem?q=...') để lấy JSON, render DOM, xử lý loading và lỗi.  
+o	Đặt index.html, huathithanhhien.css, huathithanhhien.js trong E:\Apache24\huathithanhhien (
+o	huathithanhhien.js dùng fetch('/timkiem?q=...') hoặc fetch('http://huathithanhhien.com/timkiem?q=...') để lấy JSON, render DOM, xử lý loading và lỗi.  
 o	Nếu front-end và Node-RED khác domain/port thì xử lý CORS hoặc phục vụ cùng domain.  
 Hình 7:  
 <img width="1712" height="862" alt="image" src="https://github.com/user-attachments/assets/c132e4c4-4665-460d-99d1-9877baf9364c" />  
 
 # 2.7 Nhận xét về bài làm của bản thân:  
-• Đã nắm được quy trình cài đặt, cách tạo API bằng Node-RED và cách front-end tương tác với backend; đã ghi ảnh minh chứng và logs.  
+Đã nắm được quy trình cài đặt, cách tạo API bằng Node-RED và cách front-end tương tác với backend; đã ghi ảnh minh chứng và logs.  
 •	Kiểm tra nhanh trước nộp:  
-o	Mở frontend (fullname.com) — trang hiển thị; mở Node-RED (http://localhost:1880) — flow có thể chỉnh; test API /timkiem?q=... — trả JSON; SSMS show dữ liệu demo; chụp screenshots (Apache, Node-RED flow, SSMS, service list).  
+o	Mở frontend (huathithanhhien.com) — trang hiển thị; mở Node-RED (http://localhost:1880) — flow có thể chỉnh; test API /timkiem?q=... — trả JSON; SSMS show dữ liệu demo; chụp screenshots (Apache, Node-RED flow, SSMS, service list).  
 •	Lỗi phổ biến & fix nhanh:  
 o	Port 80 bị chiếm → iisreset /stop hoặc tìm process bằng netstat.  
 o	Node-RED service không chạy → kiểm tra run-nodered.cmd/ PATH, chạy tay debug.  
