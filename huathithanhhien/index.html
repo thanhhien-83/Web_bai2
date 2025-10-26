@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tra cứu sinh viên — Hứa Thị Thanh Hiền</title>
+  <link rel="stylesheet" href="huathithanhhien.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="brand">
+      <div class="logo">HTTH</div>
+      <div class="titles">
+        <h1>Tra cứu sinh viên</h1>
+        <p class="subtitle">Giao diện cá nhân — kết nối Node-RED API</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="controls">
+        <input id="q" type="search" placeholder="Tìm theo tên hoặc lớp (ví dụ: 'Thanh' hoặc 'CNTT1')" aria-label="Tìm kiếm" />
+        <select id="filterClass" aria-label="Lọc theo lớp">
+        </select>
+        <button id="searchBtn">Tìm kiếm</button>
+      </div>
+
+      <div id="status" class="status" aria-live="polite"></div>
+
+      <section id="results" class="results" aria-label="Kết quả tìm kiếm"></section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Thiết kế và triển khai bởi Hứa Thị Thanh Hiền — mã trị riêng: HTTH</small>
+  </footer>
+
+  <script src="huathithanhhien.js"></script>
+</body>
+</html>
